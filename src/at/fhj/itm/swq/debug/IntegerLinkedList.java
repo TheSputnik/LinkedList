@@ -15,14 +15,14 @@ public class IntegerLinkedList
     {
         if(firstNode != null)
             throw new IllegalArgumentException();
-        firstNode = firstNode;
+        this.firstNode = firstNode;
     }
 
     
     /*
      * Property: size:int
      */
-    private int size;
+    private int size = this.size();
     public int size()
     {
         return size;
@@ -60,7 +60,7 @@ public class IntegerLinkedList
         Node currentNode = firstNode;
         for(int i=0; i<index; i++)
         {
-            if(currentNode != null)
+            if(currentNode == null)
                 throw new IllegalStateException();
             else
                 currentNode = currentNode.getNext();
@@ -81,7 +81,7 @@ public class IntegerLinkedList
         for(int i=0; i<size; i++)
         {
             s.append(currentNode.getValue());
-            if(i < size)
+            if(i < size-1)
                 s.append(",");
             currentNode = currentNode.getNext();
         }
