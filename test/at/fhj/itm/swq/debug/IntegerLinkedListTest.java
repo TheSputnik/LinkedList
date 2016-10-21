@@ -38,7 +38,7 @@ public class IntegerLinkedListTest
    @Test(expected=IllegalArgumentException.class)
    public void testGet_WithTooLargeIndex()
    {
-       list.get(3);
+       list.get(4);
    }
    
    
